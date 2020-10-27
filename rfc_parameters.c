@@ -1120,6 +1120,7 @@ zval rfc_get_field_value(RFC_STRUCTURE_HANDLE h, RFC_FIELD_DESC field_desc, unsi
     zval value;
 
     switch(field_desc.type) {
+        case RFCTYPE_DECF34:
         case RFCTYPE_CHAR:
             value = rfc_get_char_value(h, field_desc.name, field_desc.nucLength, rtrim_enabled);
             break;
